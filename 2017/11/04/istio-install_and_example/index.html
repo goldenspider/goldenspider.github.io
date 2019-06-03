@@ -98,10 +98,6 @@
                     </li>
                     
                     <li>
-                        <a href="/categories/note">note</a>
-                    </li>
-                    
-                    <li>
                         <a href="/categories/tech">tech</a>
                     </li>
                     
@@ -642,16 +638,16 @@ kubectl apply -f istio-0.2.10/install/kubernetes/addons/grafana.yaml
                 <div id="gitalk-container"></div>
     <link rel="stylesheet" href="/css/gitalk.css">
     <script src="/js/gitalk.min.js"></script>
+    <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
     <script type="text/javascript">
       var gitalk = new Gitalk({
-        id: '2017-11-04 12:00:00 \x2b0000 UTC',
         title: 'Istio及Bookinfo示例程序安装试用笔记',
         clientID: '7cdb37937dd968256180',
         clientSecret: 'af48893cc00d928858dfd2ad678c1878a1c68d1c',
         repo: 'goldenspider.github.io',
         owner: 'goldenspider',
         admin: ['goldenspider'],
-        id: location.pathname,      
+        id: md5(location.pathname),      
         distractionFreeMode: false,  
         body: decodeURI(location.href)
       });
@@ -681,8 +677,6 @@ kubectl apply -f istio-0.2.10/install/kubernetes/addons/grafana.yaml
                         
                         
                         
-                        
-                        
                         <a href="/tags/docker" title="docker">
                             docker
                         </a>
@@ -694,8 +688,6 @@ kubectl apply -f istio-0.2.10/install/kubernetes/addons/grafana.yaml
                         <a href="/tags/istio" title="istio">
                             istio
                         </a>
-                        
-                        
                         
                         
                         

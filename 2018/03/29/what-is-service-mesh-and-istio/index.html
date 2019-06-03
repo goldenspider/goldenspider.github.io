@@ -98,10 +98,6 @@
                     </li>
                     
                     <li>
-                        <a href="/categories/note">note</a>
-                    </li>
-                    
-                    <li>
                         <a href="/categories/tech">tech</a>
                     </li>
                     
@@ -287,6 +283,8 @@
 * 随着时间的变化，代码库会存在不同的版本，不同版本代码库的兼容性和大量运行          环境中微服务的升级将成为一个难题。</p>
 
 <p>可以将微服务之间的通讯基础设施层和TCP/IP协议栈进行类比。TCP/IP协议栈为操作系统中的所有应用提供基础通信服务，但TCP/IP协议栈和应用程序之间并没有紧密的耦合关系，应用只需要使用TCP/IP协议提供的底层通讯功能,并不关心TCP/IP协议的实现，如IP如何进行路由，TCP如何创建链接等。</p>
+
+<p><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=32507038&auto=1&height=66"></iframe><br></p>
 
 <p>同样地，微服务应用也不应该需要关注服务发现，Load balancing，Retries，Circuit Breaker等微服务之间通信的底层细节。如果将为微服务提供通信服务的这部分逻辑从应用程序进程中抽取出来，作为一个单独的进程进行部署，并将其作为服务间的通信代理，可以得到如下图所示的架构：
 <img src="https://img.zhaohuabing.com/in-post/2018-03-29-what-is-service-mesh-and-istio/sidecar.png" alt="" />
@@ -572,16 +570,16 @@ Envoy收集一个端到端调用中的各个分段的数据，并将这些调用
                 <div id="gitalk-container"></div>
     <link rel="stylesheet" href="/css/gitalk.css">
     <script src="/js/gitalk.min.js"></script>
+    <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
     <script type="text/javascript">
       var gitalk = new Gitalk({
-        id: '2018-03-29 12:00:00 \x2b0000 UTC',
         title: '谈谈微服务架构中的基础设施：Service Mesh与Istio',
         clientID: '7cdb37937dd968256180',
         clientSecret: 'af48893cc00d928858dfd2ad678c1878a1c68d1c',
         repo: 'goldenspider.github.io',
         owner: 'goldenspider',
         admin: ['goldenspider'],
-        id: location.pathname,      
+        id: md5(location.pathname),      
         distractionFreeMode: false,  
         body: decodeURI(location.href)
       });
@@ -611,8 +609,6 @@ Envoy收集一个端到端调用中的各个分段的数据，并将这些调用
                         
                         
                         
-                        
-                        
                         <a href="/tags/docker" title="docker">
                             docker
                         </a>
@@ -624,8 +620,6 @@ Envoy收集一个端到端调用中的各个分段的数据，并将这些调用
                         <a href="/tags/istio" title="istio">
                             istio
                         </a>
-                        
-                        
                         
                         
                         

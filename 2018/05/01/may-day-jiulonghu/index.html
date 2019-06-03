@@ -98,10 +98,6 @@
                     </li>
                     
                     <li>
-                        <a href="/categories/note">note</a>
-                    </li>
-                    
-                    <li>
                         <a href="/categories/tech">tech</a>
                     </li>
                     
@@ -357,7 +353,7 @@
                     
                     
                     <li class="next">
-                        <a href="/2018/05/21/algolia-integration-with-jekyll" data-toggle="tooltip" data-placement="top" title="使用Algolia为Gitpage博客提供站内搜索">Next
+                        <a href="/2018/05/23/istio-auto-injection-with-webhook/" data-toggle="tooltip" data-placement="top" title="Istio Sidecar自动注入原理">Next
                             Post &rarr;</a>
                     </li>
                     
@@ -366,16 +362,16 @@
                 <div id="gitalk-container"></div>
     <link rel="stylesheet" href="/css/gitalk.css">
     <script src="/js/gitalk.min.js"></script>
+    <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
     <script type="text/javascript">
       var gitalk = new Gitalk({
-        id: '2018-05-01 00:00:00 \x2b0000 UTC',
         title: '川西秘境探险',
         clientID: '7cdb37937dd968256180',
         clientSecret: 'af48893cc00d928858dfd2ad678c1878a1c68d1c',
         repo: 'goldenspider.github.io',
         owner: 'goldenspider',
         admin: ['goldenspider'],
-        id: location.pathname,      
+        id: md5(location.pathname),      
         distractionFreeMode: false,  
         body: decodeURI(location.href)
       });
@@ -405,8 +401,6 @@
                         
                         
                         
-                        
-                        
                         <a href="/tags/docker" title="docker">
                             docker
                         </a>
@@ -418,8 +412,6 @@
                         <a href="/tags/istio" title="istio">
                             istio
                         </a>
-                        
-                        
                         
                         
                         

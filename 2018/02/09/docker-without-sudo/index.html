@@ -98,10 +98,6 @@
                     </li>
                     
                     <li>
-                        <a href="/categories/note">note</a>
-                    </li>
-                    
-                    <li>
                         <a href="/categories/tech">tech</a>
                     </li>
                     
@@ -246,16 +242,16 @@
                 <div id="gitalk-container"></div>
     <link rel="stylesheet" href="/css/gitalk.css">
     <script src="/js/gitalk.min.js"></script>
+    <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
     <script type="text/javascript">
       var gitalk = new Gitalk({
-        id: '2018-02-09 10:00:00 \x2b0000 UTC',
         title: '如何使用非root用户执行docker命令',
         clientID: '7cdb37937dd968256180',
         clientSecret: 'af48893cc00d928858dfd2ad678c1878a1c68d1c',
         repo: 'goldenspider.github.io',
         owner: 'goldenspider',
         admin: ['goldenspider'],
-        id: location.pathname,      
+        id: md5(location.pathname),      
         distractionFreeMode: false,  
         body: decodeURI(location.href)
       });
@@ -285,8 +281,6 @@
                         
                         
                         
-                        
-                        
                         <a href="/tags/docker" title="docker">
                             docker
                         </a>
@@ -298,8 +292,6 @@
                         <a href="/tags/istio" title="istio">
                             istio
                         </a>
-                        
-                        
                         
                         
                         
